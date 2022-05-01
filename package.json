@@ -6,6 +6,8 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
+    "gcp-build": "ng build -c production --base-href /ng-compression-demo/",
+    "gcp-deploy": "gsutil -m -o \"GSUtil:parallel_process_count=1\" cp -r -z js,css ./dist/ng-gzip-compression/* gs://ng-compression-demo",
     "test": "ng test"
   },
   "private": true,
